@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #070707;
+            color: white;
+        }
+        .header {
+            /* background-color: transparent; */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            width: 150px;
+            color: #E50914;
+
+        }
+        .header{
+            background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/826348c2-cdcb-42a0-bc11-a788478ba5a2/6d20b198-e7ab-4e9f-a1aa-666faa0298f9/IN-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_a67d8c9e-8121-4a74-98e4-8005eb2df227_small.jpg');
+            ;
+        }
+        .header .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .header .nav-links li {
+            display: inline;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .banner {
+            height: 80vh;
+            background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/826348c2-cdcb-42a0-bc11-a788478ba5a2/6d20b198-e7ab-4e9f-a1aa-666faa0298f9/IN-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_a67d8c9e-8121-4a74-98e4-8005eb2df227_small.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 3rem;
+        }
+        .banner p {
+            font-size: 1.5rem;
+        }
+        .search-input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+     }
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e50914;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #f40612;
+}
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .movie-row {
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+        }
+        .movie-row img {
+            height: 200px;
+            border-radius: 5px;
+        }
+        .movie-row::-webkit-scrollbar {
+            height: 10px;
+        }
+        .movie-row::-webkit-scrollbar-thumb {
+            background-color: rgb(0, 0, 0);
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">New & Popular</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div>
+            <h1> Movies, TV shows, and more.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <div>
+                <input type="text" class="search-input" placeholder="Search for movies, TV shows, genres, etc.">
+                <button class="search-button">Search</button> 
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="section">
+            <h2>Popular on Netflix</h2>
+            <div class="movie-row">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXv9UDtXqQmlucaK8GGqsM7rPRDlXHvfum1tHNfZYG0VswoR6uVP8t2MHXEWGkxu6t0xh8rXARCs6p_taSsWaUgZCCf74WjNFvC_F7qKaGJFFlFDIOAt6TIy_qjnydLqD-sbEw.jpg?r=23e" alt="THE WITCHER">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbgcp1h0LD9uChIJ-5vqlLO5b75n3-0Oyn3T2wRabaHXKLGwaJo6u6SiVs3wzEoQ02kgWTHsbbU-EGuff5AaE26Nxh3a16sO_vIH.jpg?r=66a" alt="SALAAR">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeYOwt43Qbc_MdUj7_ijb7rWI4t9INWI8Gzlh36Bgd3jlQiNWT3lt2cxKmXfysTMgRfHSbjLbt62U0s9I_W8Lbu-JFZXuG6N0dE.jpg?r=434" alt="ANIMAL">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABf-LFwANbcC06hFAXkmxcX-YGliPKzK854nrSdSa4xrhOAZf2YNRDDlEJ9XBJ2AzrQwV8_JOcf4JEdPtJMqbX17L3BNd3WUactI3.jpg?r=ae7" alt="Gangs of Godavari">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR871v8B_5W4-2bL3zy0-l1jI1d_kDdYwjnAQXO84kUMxrrbFDunGwXrJN1H_TbQ3qqap3HbzIMjw8HyQuWDGhfgHarGKPtE6JfLZ-awelcRb_ipCja19iEU7yNWXTtp7yvN.jpg?r=347" alt="Red Notice">
+            </div>
+        </div>
+        <div class="section">
+            <h2>Trending Now</h2>
+            <div class="movie-row">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXIAlY7lO4GBOYh3mukbhv-vp7mdmLg2FEJ527pfl1WCElXOpEnV7trjWN1JyG5Tdj665CkE0HSd0U4S6kMQnan4-d663kqHfhIIdvAXmr_fnBxFizDnK9J6DcyjHQ0Yx9tjKQ.jpg?r=158" alt="SHADOW HUNTER">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXUDjEHClZcCZgm-5UafFaYFSFXGb96kmYBwNq71rriMHWHMZY83exiicchhK-lhdOsq15K6vacqcmqlPk2_cpXpPsLttRNxtER5NLceNw7m4Ujh1qHTTRjWJaChtdaK0bvsCJNTfRS4RHAwbrgJ-HjQ3h3PvGOAAIV44fF7sbDglzfyHBU1i-hzAR037_8C_rwiYXy4zhaOxnW2VY8mXtjLrhuuUyr-r3Ea7rXsLkcX757FgBqMWzpQ--kSil258pvVI6rfaTB0OHhtDrzsfJmyG5IQoscreZ85K7Epwc0ASX-X7jZA55olXPl1uTjz1B76EvE_I2QgkzBsRU8R8tk.jpg?r=0a0" alt="Maharaja">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXFBcPJBOi-FNIcF0KQxp4SSFkob-prBrH2VYfahc6OEXLkC7LpvoVamC6R0ywxsT1pVzNhFpnZtACXjvNRVSP4mHxNhOWxDcDw.jpg?r=cf7" alt="Goat Life">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbgcp1h0LD9uChIJ-5vqlLO5b75n3-0Oyn3T2wRabaHXKLGwaJo6u6SiVs3wzEoQ02kgWTHsbbU-EGuff5AaE26Nxh3a16sO_vIH.jpg?r=66a" alt="SALAAR">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSCFopaD94HDNI50kc2S0zbFr11Uc4DhN2xSEXRTgyyTaxOXWwzVO1QzK74Be4ekN7BG7lqaZ_d_Elk1akcDAp_T3WxLck41KGDD.jpg?r=4bc" alt="Hi Nanna">
+            </div>
+
+        </div>
+        <div class="section">
+            <h2>Top Picks for You</h2>
+            <div class="movie-row">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa1hIhlD-HfyNEwi_Y00KpDBh88b_GEtOoVWfh9VjCiYWgwYv35Me4lWu1w30DuF7f8scIPK8pPQztQm01WxYHIBskHKCn32lKs.jpg?r=718" alt="Virupaksha">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaxRfyQp1AmI_-NvaELqaBKeuLR_0E-yQA7rQY8uQl8JOr2Lv3SFKoneg_V8QY1vHrGEqhj5PlsoK926lKvjUfjaXAqcfpqFP0QMtgSc2qpD1ZXiqjyl2wr6XeHKdPcfF3Ot_Q.jpg?r=c0e" alt="Peaky blinder">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWFAIa8SCifyHpH4nYjBREVfkRxYpASsUTPUcwo1PzdjqszqG_mfvQiVhoA-J0h4aA2jp4WXdROrsWtLVTtAFpEoIH1xKnqlNPw.jpg?r=e61" alt="Tillu Square">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXFUhCrT8LgT5eiNMCSHkOc8rjKXoaviYDFw0S20Ixyf0CDGh832IJvDqvpWxPbqvBVWVrtHszfNRZV10PlJ44tQ6sF_kY4ueq0.jpg?r=5e8" alt="Guntur Karam">
+                <img src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXjA49NtFBXVR0cbfh8B94osXW1PYYe8wdyJIYrnih4BhVjogjdol48gm-lgbcZxCEw66EH_abCo3yEkM0s9Cv8I9dXsihTG1X7VrzweKAJj6SLlPxhDKs3YFpgWC29gRiub.jpg?r=d7f" alt="Rana Naidu">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+</html>

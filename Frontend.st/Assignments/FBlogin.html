@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(232, 231, 231);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .main-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 300px;
+        height: auto;
+      }
+
+      .form-container {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #145dbf;
+      }
+
+      p {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .form-container p {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #1877f2;
+      }
+
+      .form-container hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 20px 0;
+      }
+
+      .form-container button {
+        background-color: #42b72a;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .form-container button:hover {
+        background-color: #36a420;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <img
+          src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
+          alt="facebook"
+        />
+        <p>
+          Facebook helps you connect and share with the people in your life.
+        </p>
+      </div>
+      <div class="container form-container">
+        <form action="#">
+          <input type="text" placeholder="Enter address or phone number" />
+          <input type="password" placeholder="Enter your password" />
+          <input type="submit" value="Log In" />
+          <p>Forgotten password?</p>
+          <hr />
+          <button>Create new account</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
